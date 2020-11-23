@@ -1,0 +1,24 @@
+{% extends 'layouts/index.twig' %}
+
+{% block title %}Все пользователи{% endblock %}
+
+{% block content %}
+	<div style="min-height: 265px;">
+	    {% for user in users %}
+	        <h4>ID: {{ user.id }}</h4>
+	        <p>
+	        	Фамилия: {{ user.lastname }} <br>
+	        	Имя: {{ user.firstname }} <br>
+	        	Отчество: {{ user.patronymic }} <br>
+	        	Телефоны:
+	        	{% for phone in user.phones %}
+	        		{{ phone }}, 
+	        	{% endfor %}
+	        </p>
+	        <a href="/user/getOneUser?id={{ user.id }}">Подробнее</a>
+	        <hr>
+	    {% else %}
+	        Список пуст
+	    {% endfor %}
+	</div>
+{% endblock %}

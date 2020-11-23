@@ -1,0 +1,17 @@
+{% extends 'layouts/index.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    <form method="post">
+        <input name="firstname" placeholder="firstname" value="{{ user.firstname }}">
+        <input name="lastname" placeholder="lastname" value="{{ user.lastname }}">
+        <input name="patronymic" placeholder="patronymic" value="{{ user.patronymic }}">
+        <input name="phone1" placeholder="phone1" value="{{ phones[0].phone }}">
+        <input name="phone2" placeholder="phone2" value="{{ phones[1].phone }}">
+        <input name="phone3" placeholder="phone3" value="{{ phones[2].phone }}">
+        <input name="phone4" placeholder="phone4" value="{{ phones[3].phone }}">
+        <input type="submit">
+    </form>
+{% endblock %}

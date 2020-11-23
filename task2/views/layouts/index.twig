@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>{% block title %}Handbook{% endblock %}</title>
+    <style>
+        .center {
+            margin: 0 auto;
+            width: 1180px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="center">
+        <li><a href="/user/getAllUsers">Показать всех пользователей</a></li>
+        <li><a href="/user/addUser">Добавить пользователя</a></li>
+    </ul>
+    {% block content %}{% endblock %}
+</body>
+</html>

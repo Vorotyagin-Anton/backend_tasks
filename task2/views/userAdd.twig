@@ -1,0 +1,17 @@
+{% extends 'layouts/index.twig' %}
+
+{% block title %}Добавить пользователя{% endblock %}
+
+{% block content %}
+    <h1>Добавление нового пользователя</h1>
+    <form method="post">
+        <input name="firstname" placeholder="firstname">
+        <input name="lastname" placeholder="lastname">
+        <input name="patronymic" placeholder="patronymic">
+        <input name="phone1" placeholder="phone1">
+        <input name="phone2" placeholder="phone2">
+        <input name="phone3" placeholder="phone3">
+        <input name="phone4" placeholder="phone4">
+        <input type="submit">
+    </form>
+{% endblock %}

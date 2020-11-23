@@ -1,0 +1,18 @@
+{% extends 'layouts/index.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <p>
+    	Фамилия: {{ user.lastname }} <br>
+    	Имя: {{ user.firstname }} <br>
+    	Отчество: {{ user.patronymic }} <br>
+    	Телефоны:
+    	{% for phone in user.phones %}
+    		{{ phone }}, 
+    	{% endfor %}
+    </p>
+    <a href="/user/delUser?id={{ user.id }}">Удалить пользователя</a>
+    <a href="/user/updUser?id={{ user.id }}">Изменить данные пользователя</a>
+    <hr>
+{% endblock %}
